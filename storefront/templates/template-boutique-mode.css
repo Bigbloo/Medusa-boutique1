@@ -1,0 +1,306 @@
+/* ===== TEMPLATE BOUTIQUE DE MODE ===== */
+/* Style élégant noir et or - Luxueux et sophistiqué */
+
+@layer components {
+  /* Variables pour le thème Mode */
+  :root {
+    --fashion-black: #000000;
+    --fashion-gold: #fbbf24;
+    --fashion-gold-light: #fde68a;
+    --fashion-gray: #374151;
+    --fashion-light-gray: #f9fafb;
+    --fashion-white: #ffffff;
+  }
+
+  /* ===== BOUTONS FASHION ===== */
+  .btn-fashion-primary {
+    @apply bg-black hover:bg-gray-800 text-white font-bold py-4 px-8 transition-all duration-500 relative overflow-hidden;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.875rem;
+  }
+
+  .btn-fashion-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-fashion-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-fashion-secondary {
+    @apply border-2 border-black text-black hover:bg-black hover:text-white font-bold py-4 px-8 transition-all duration-300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.875rem;
+  }
+
+  .btn-fashion-gold {
+    @apply bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 transition-all duration-300 shadow-lg hover:shadow-xl;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.875rem;
+  }
+
+  /* ===== HEADER FASHION ===== */
+  .fashion-header {
+    @apply bg-white shadow-lg border-b-2 border-black;
+  }
+
+  .fashion-logo {
+    @apply text-black font-black text-2xl tracking-wider;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .fashion-nav-link {
+    @apply text-black font-semibold hover:text-yellow-400 transition-colors duration-300 relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+  }
+
+  .fashion-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fbbf24;
+    transition: width 0.3s ease;
+  }
+
+  .fashion-nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* ===== CARTES PRODUITS FASHION ===== */
+  .fashion-product-card {
+    @apply bg-white shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden group;
+    border: 1px solid #e5e7eb;
+  }
+
+  .fashion-product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(251,191,36,0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .fashion-product-card:hover::before {
+    opacity: 1;
+  }
+
+  .fashion-product-image {
+    @apply transition-transform duration-700 group-hover:scale-110;
+  }
+
+  .fashion-product-overlay {
+    @apply absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500 flex items-center justify-center;
+    z-index: 2;
+  }
+
+  .fashion-product-overlay-content {
+    @apply transform translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500;
+  }
+
+  .fashion-product-info {
+    @apply p-6 relative z-10;
+  }
+
+  .fashion-product-title {
+    @apply text-xl font-bold text-black mb-2;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .fashion-product-price {
+    @apply text-2xl font-black text-yellow-600;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .fashion-product-price-original {
+    @apply text-gray-500 line-through text-lg mr-2;
+  }
+
+  .fashion-badge-new {
+    @apply absolute top-4 left-4 bg-yellow-400 text-black font-bold px-3 py-1 text-xs z-10;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .fashion-badge-sale {
+    @apply absolute top-4 right-4 bg-black text-white font-bold px-3 py-1 text-xs z-10;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ===== SECTIONS FASHION ===== */
+  .fashion-hero {
+    @apply bg-black text-white py-24 relative overflow-hidden;
+  }
+
+  .fashion-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(251,191,36,0.1), rgba(0,0,0,0.8));
+    z-index: 1;
+  }
+
+  .fashion-hero-content {
+    @apply relative z-10;
+  }
+
+  .fashion-hero-title {
+    @apply text-6xl font-black mb-6;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  .fashion-hero-subtitle {
+    @apply text-xl font-light mb-8 text-yellow-200;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+
+  .fashion-section-title {
+    @apply text-4xl font-black text-center mb-16 relative;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .fashion-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #fbbf24;
+  }
+
+  /* ===== FORMULAIRES FASHION ===== */
+  .fashion-form-input {
+    @apply w-full px-6 py-4 border-2 border-gray-300 focus:border-black transition-all duration-300 bg-white;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .fashion-form-input:focus {
+    @apply outline-none shadow-lg;
+  }
+
+  .fashion-form-label {
+    @apply block text-black font-bold mb-2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+  }
+
+  /* ===== FOOTER FASHION ===== */
+  .fashion-footer {
+    @apply bg-black text-white py-16;
+  }
+
+  .fashion-footer-title {
+    @apply text-xl font-bold mb-6 text-yellow-400;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .fashion-footer-link {
+    @apply text-gray-300 hover:text-yellow-400 transition-colors duration-300 block mb-2;
+    font-size: 0.875rem;
+  }
+
+  /* ===== ANIMATIONS FASHION ===== */
+  @keyframes fashionSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fashion-animate-slide-in {
+    animation: fashionSlideIn 0.8s ease-out;
+  }
+
+  @keyframes fashionGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(251, 191, 36, 0.6);
+    }
+  }
+
+  .fashion-glow {
+    animation: fashionGlow 2s ease-in-out infinite;
+  }
+
+  /* ===== EFFETS SPÉCIAUX FASHION ===== */
+  .fashion-text-gold {
+    @apply text-yellow-400;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+
+  .fashion-text-elegant {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+
+  .fashion-divider {
+    @apply w-24 h-1 bg-yellow-400 mx-auto my-8;
+  }
+
+  .fashion-hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+
+  .fashion-luxury-border {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #fbbf24, #000000, #fbbf24) 1;
+  }
+
+  /* ===== RESPONSIVE FASHION ===== */
+  @media (max-width: 768px) {
+    .fashion-hero-title {
+      @apply text-4xl;
+    }
+    
+    .fashion-section-title {
+      @apply text-3xl;
+    }
+    
+    .btn-fashion-primary,
+    .btn-fashion-secondary,
+    .btn-fashion-gold {
+      @apply py-3 px-6 text-sm;
+    }
+  }
+}

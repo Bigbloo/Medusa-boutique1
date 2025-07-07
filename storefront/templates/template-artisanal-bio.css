@@ -1,0 +1,420 @@
+/* ===== TEMPLATE ARTISANAL/BIO ===== */
+/* Style naturel et chaleureux - Organique et authentique */
+
+@layer components {
+  /* Variables pour le thème Artisanal/Bio */
+  :root {
+    --nature-green: #059669;
+    --nature-light-green: #10b981;
+    --nature-dark-green: #047857;
+    --nature-beige: #f5f5dc;
+    --nature-cream: #fefcf3;
+    --nature-brown: #8b4513;
+    --nature-light-brown: #d2b48c;
+    --nature-earth: #8b7355;
+    --nature-white: #fffef7;
+    --nature-gray: #6b7280;
+  }
+
+  /* ===== BOUTONS NATURE ===== */
+  .btn-nature-primary {
+    @apply bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl;
+    font-family: 'Nunito', sans-serif;
+    border: 2px solid transparent;
+  }
+
+  .btn-nature-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
+  }
+
+  .btn-nature-secondary {
+    @apply border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .btn-nature-earth {
+    @apply bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .btn-nature-soft {
+    @apply bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-8 rounded-full transition-all duration-300;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* ===== HEADER NATURE ===== */
+  .nature-header {
+    @apply bg-white shadow-md border-b-4 border-green-500;
+    background: linear-gradient(135deg, #fffef7 0%, #fefcf3 100%);
+  }
+
+  .nature-logo {
+    @apply text-green-700 font-bold text-2xl;
+    font-family: 'Pacifico', cursive;
+  }
+
+  .nature-nav-link {
+    @apply text-green-700 hover:text-green-500 transition-colors duration-300 relative font-medium;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #059669, #10b981);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+
+  .nature-nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* ===== CARTES PRODUITS NATURE ===== */
+  .nature-product-card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group;
+    border: 2px solid #f0fdf4;
+  }
+
+  .nature-product-card:hover {
+    border-color: #bbf7d0;
+    transform: translateY(-3px);
+  }
+
+  .nature-product-image {
+    @apply transition-transform duration-500 group-hover:scale-105 rounded-t-2xl;
+  }
+
+  .nature-product-overlay {
+    @apply absolute inset-0 bg-green-500 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-500 rounded-2xl;
+  }
+
+  .nature-product-info {
+    @apply p-6;
+  }
+
+  .nature-product-title {
+    @apply text-xl font-bold text-green-800 mb-2;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-product-description {
+    @apply text-gray-600 text-sm mb-3 leading-relaxed;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-product-price {
+    @apply text-2xl font-bold text-green-600;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-product-price-original {
+    @apply text-gray-400 line-through text-lg mr-2;
+  }
+
+  .nature-badge-organic {
+    @apply absolute top-4 left-4 bg-green-500 text-white font-bold px-3 py-1 text-xs rounded-full z-10;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-badge-new {
+    @apply absolute top-4 right-4 bg-yellow-500 text-white font-bold px-3 py-1 text-xs rounded-full z-10;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-badge-eco {
+    @apply absolute top-4 left-4 bg-green-600 text-white font-bold px-3 py-1 text-xs rounded-full z-10;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* ===== SECTIONS NATURE ===== */
+  .nature-hero {
+    @apply py-24 relative overflow-hidden;
+    background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 50%, #dcfce7 100%);
+  }
+
+  .nature-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(5, 150, 105, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    z-index: 1;
+  }
+
+  .nature-hero-content {
+    @apply relative z-10;
+  }
+
+  .nature-hero-title {
+    @apply text-5xl font-bold mb-6 text-green-800;
+    font-family: 'Pacifico', cursive;
+  }
+
+  .nature-hero-subtitle {
+    @apply text-xl mb-8 text-green-600 leading-relaxed;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-section-title {
+    @apply text-4xl font-bold text-center mb-16 relative text-green-800;
+    font-family: 'Pacifico', cursive;
+  }
+
+  .nature-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #059669, #10b981);
+    border-radius: 2px;
+  }
+
+  /* ===== FORMULAIRES NATURE ===== */
+  .nature-form-input {
+    @apply w-full px-4 py-3 border-2 border-green-200 rounded-xl focus:border-green-500 transition-all duration-300 bg-white;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-form-input:focus {
+    @apply outline-none;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+  }
+
+  .nature-form-label {
+    @apply block text-green-700 font-semibold mb-2;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-form-textarea {
+    @apply w-full px-4 py-3 border-2 border-green-200 rounded-xl focus:border-green-500 transition-all duration-300 bg-white resize-none;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* ===== FOOTER NATURE ===== */
+  .nature-footer {
+    @apply py-16;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border-top: 3px solid #10b981;
+  }
+
+  .nature-footer-title {
+    @apply text-xl font-bold mb-6 text-green-700;
+    font-family: 'Pacifico', cursive;
+  }
+
+  .nature-footer-link {
+    @apply text-green-600 hover:text-green-500 transition-colors duration-300 block mb-2;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* ===== ANIMATIONS NATURE ===== */
+  @keyframes natureGrow {
+    from {
+      opacity: 0;
+      transform: scale(0.8) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .nature-animate-grow {
+    animation: natureGrow 0.8s ease-out;
+  }
+
+  @keyframes natureSway {
+    0%, 100% {
+      transform: rotate(-1deg);
+    }
+    50% {
+      transform: rotate(1deg);
+    }
+  }
+
+  .nature-sway {
+    animation: natureSway 3s ease-in-out infinite;
+  }
+
+  @keyframes natureFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .nature-float {
+    animation: natureFloat 4s ease-in-out infinite;
+  }
+
+  /* ===== EFFETS SPÉCIAUX NATURE ===== */
+  .nature-text-green {
+    @apply text-green-600;
+    font-family: 'Pacifico', cursive;
+  }
+
+  .nature-text-earth {
+    @apply text-yellow-700;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+  }
+
+  .nature-divider {
+    @apply w-24 h-2 mx-auto my-8 rounded-full;
+    background: linear-gradient(90deg, #059669, #10b981, #34d399);
+  }
+
+  .nature-hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .nature-soft-shadow {
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.1);
+  }
+
+  .nature-soft-shadow:hover {
+    box-shadow: 0 15px 35px rgba(5, 150, 105, 0.2);
+  }
+
+  .nature-organic-border {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transition: border-radius 0.5s ease;
+  }
+
+  .nature-organic-border:hover {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  }
+
+  /* ===== SECTIONS SPÉCIALES ===== */
+  .nature-testimonial {
+    @apply bg-green-50 rounded-2xl p-8 relative;
+    border-left: 5px solid #10b981;
+  }
+
+  .nature-testimonial::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 4rem;
+    color: #10b981;
+    font-family: 'Pacifico', cursive;
+  }
+
+  .nature-feature-box {
+    @apply bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+    border-top: 4px solid #10b981;
+  }
+
+  .nature-feature-icon {
+    @apply w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto;
+  }
+
+  .nature-stats-number {
+    @apply text-4xl font-bold text-green-600 mb-2;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-stats-label {
+    @apply text-green-700 font-medium;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* ===== RESPONSIVE NATURE ===== */
+  @media (max-width: 768px) {
+    .nature-hero-title {
+      @apply text-3xl;
+    }
+    
+    .nature-section-title {
+      @apply text-3xl;
+    }
+    
+    .btn-nature-primary,
+    .btn-nature-secondary,
+    .btn-nature-earth,
+    .btn-nature-soft {
+      @apply py-2 px-6 text-sm;
+    }
+  }
+
+  /* ===== PATTERNS NATURE ===== */
+  .nature-bg-leaves {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(5, 150, 105, 0.05) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.05) 2px, transparent 2px);
+    background-size: 40px 40px;
+  }
+
+  .nature-bg-organic {
+    background: 
+      radial-gradient(ellipse at top left, rgba(5, 150, 105, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+  }
+
+  /* ===== ÉLÉMENTS DÉCORATIFS ===== */
+  .nature-leaf-decoration::before {
+    content: '🌿';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+  }
+
+  .nature-eco-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-eco-badge::before {
+    content: '♻️';
+    margin-right: 0.25rem;
+  }
+
+  .nature-organic-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .nature-organic-badge::before {
+    content: '🌱';
+    margin-right: 0.25rem;
+  }
+
+  /* ===== COULEURS SUPPLÉMENTAIRES ===== */
+  .nature-bg-sage {
+    background-color: #f0f4f0;
+  }
+
+  .nature-bg-mint {
+    background-color: #f0fdf4;
+  }
+
+  .nature-bg-cream {
+    background-color: #fefcf3;
+  }
+
+  .nature-text-sage {
+    color: #6b7c6b;
+  }
+
+  .nature-border-sage {
+    border-color: #d1d5d1;
+  }
+}
