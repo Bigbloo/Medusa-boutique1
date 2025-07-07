@@ -3,17 +3,25 @@
 ## ❌ Problème Identifié
 Railway a essayé de déployer depuis la racine du projet au lieu du dossier `backend/`.
 
-## ✅ Solution
+## ✅ Solutions (3 options)
 
-### 1. Configurer le Root Directory
+### Option 1 : Utiliser la configuration automatique (RECOMMANDÉ)
+J'ai ajouté des fichiers de configuration qui permettent à Railway de déployer depuis la racine :
+- `package.json` - Scripts de build qui pointent vers le backend
+- `railway.toml` - Configuration Railway spécifique
+- `backend/nixpacks.toml` - Configuration Nixpacks optimisée
+
+**Action :** Redéployez simplement depuis GitHub, Railway utilisera automatiquement ces configurations.
+
+### Option 2 : Configurer le Root Directory manuellement
 Dans Railway :
 1. Allez dans **Settings** → **General**
 2. Trouvez **Root Directory**
 3. Changez de `/` vers `/backend`
 4. Cliquez **Save**
 
-### 2. Alternative : Créer un nouveau déploiement
-Si la première option ne marche pas :
+### Option 3 : Créer un nouveau déploiement
+Si les options précédentes ne marchent pas :
 1. Supprimez le déploiement actuel
 2. Créez un **New Project**
 3. **Deploy from GitHub repo** → Sélectionnez `Medusa-boutique1`

@@ -1,0 +1,13 @@
+{
+  "name": "medusa-boutique-deployment",
+  "version": "1.0.0",
+  "description": "Boutique e-commerce Medusa - Déploiement",
+  "scripts": {
+    "build": "cd backend && yarn install && yarn build",
+    "start": "cd backend && yarn start",
+    "dev": "cd backend && yarn dev"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
